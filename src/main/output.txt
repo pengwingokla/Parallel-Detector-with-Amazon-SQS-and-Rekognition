@@ -1,0 +1,21 @@
+Image index: 1.jpg
+Detected text: $ BR8167
+Detected text: $
+Detected text: BR8167
+
+Image index: 4.jpg
+Detected text: YHI9 OTZ
+Detected text: YHI9
+Detected text: OTZ
+
+Image index: 7.jpg
+Detected text: Lamborghini
+Detected text: LP 610 LB
+Detected text: ВО
+Detected text: BWW
+Detected text: Lamborghini
+Detected text: LP
+Detected text: 610 LB
+Detected text: ВО
+Detected text: BWW
+
