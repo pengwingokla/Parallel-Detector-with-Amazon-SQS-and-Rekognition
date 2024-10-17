@@ -51,3 +51,5 @@ On the terminal of each instance use:
 - On instance A, use the `CarDetector.java` file. 
 - On instance B, use the `TextRecognition.java` file. 
 - Use the same `pom.xml` file for the dependencies set up of the application on both instances.
+- On terminal compile the code using Maven: `mvn clean compile`
+
