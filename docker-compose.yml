@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  car-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    volumes:
+      - ./src/main/resources:/app/config
+    command: ["java", "-cp", "app.jar", "org.example.basicapp.CarDetector"]
+
+  text-recognition:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    volumes:
+      - ./src/main/resources:/app/config
+      - ./output:/app/output
+    command: ["java", "-cp", "app.jar", "org.example.basicapp.TextRecognition"]
+    depends_on:
+      - car-detector
+
